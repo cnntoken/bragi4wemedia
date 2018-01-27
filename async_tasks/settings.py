@@ -1,0 +1,12 @@
+from bragi.settings import TIME_ZONE, LOG_DIR, ASYNC_MQ_HOST, ASYNC_MQ_PORT, ASYNC_MQ_DB
+
+CELERYD_MAX_TASKS_PER_CHILD = 40
+CELERYD_CONCURRENCY = 1
+CELERY_TIMEZONE = TIME_ZONE
+CELERYD_LOG_FILE = LOG_DIR + '/send_mail.log'
+CELERYBEAT_LOG_FILE = LOG_DIR + '/send_mail_celerybeat.log'
+CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+CELERY_IMPORTS = ('async_tasks.tasks')
+CELERY_DEFAULT_QUEUE = 'send_mail'
+CELERY_DEFAULT_EXCHANGE_TYPE = 'direct'
+CELERY_DEFAULT_ROUTING_KEY = 'send_mail'
