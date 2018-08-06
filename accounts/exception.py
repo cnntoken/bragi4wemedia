@@ -32,3 +32,6 @@ class OldPasswordError(AccountException):
 
 class EmailNotExist(AccountException):
     code = 20009
+
+class CreatedFailed(AccountException):
+    code = 20010
