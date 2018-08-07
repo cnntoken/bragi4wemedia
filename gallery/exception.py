@@ -11,3 +11,6 @@ class UploadFailed(GalleryExcepiton):
 class ImageNotExist(GalleryExcepiton):
     code = 50002
 
+class ImageRenderFailed(GalleryExcepiton):
+    code = 50003
+

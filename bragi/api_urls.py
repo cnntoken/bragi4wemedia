@@ -11,11 +11,11 @@ from notifications import api_urls as notifications_urls
 from admin import api_urls as admin_urls
 
 urlpatterns = [
-    url(r'^accounts/', include(accounts_urls)),
-    url(r'^media/', include(media_urls)),
-    url(r'^articles/', include(articles_urls)),
-    url(r'^gallery/', include(gallery_urls)),
-    url(r'^statistics/', include(statistics_urls)),
-    url(r'^comments/', include(comments_urls)),
-    url(r'^notifications/', include(notifications_urls)),
+    url(r'^v1/accounts/', include(accounts_urls)),
+    url(r'^v1/media/', include(media_urls)),
+    url(r'^v1/articles/', include(articles_urls)),
+    url(r'^v1/gallery/', include(gallery_urls)),
+    url(r'^v1/statistics/', include(statistics_urls)),
+    url(r'^v1/comments/', include(comments_urls)),
+    url(r'^v1/notifications/', include(notifications_urls)),
 ]
